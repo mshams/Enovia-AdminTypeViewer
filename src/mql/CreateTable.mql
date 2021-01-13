@@ -1,0 +1,20 @@
+add table Ext_AdminTypeTable system description "Admin Type";
+mod table Ext_AdminTypeTable system column name "name" label "Name" order 1
+  setting 'Column Type' 'program'
+  setting 'program' 'jpo.AdminTypeTable'
+  setting 'function' 'getParamByColumnName';
+
+mod table Ext_AdminTypeTable system column name "desc" label "Description" order 2
+  setting 'Column Type' 'program'
+  setting 'program' 'jpo.AdminTypeTable'
+  setting 'function' 'getParamByColumnName';
+
+mod table Ext_AdminTypeTable system column name "originated" label "Creation Date" order 3
+  setting 'Column Type' 'program'
+  setting 'program' 'jpo.AdminTypeTable'
+  setting 'function' 'getParamByColumnName';
+
+mod table Ext_AdminTypeTable system column name "modified" label "Modification Date" order 4
+  setting 'Column Type' 'program'
+  setting 'program' 'jpo.AdminTypeTable'
+  setting 'function' 'getParamByColumnName';

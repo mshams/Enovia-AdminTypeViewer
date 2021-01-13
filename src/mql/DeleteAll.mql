@@ -1,0 +1,8 @@
+del table Ext_AdminTypeTable system;
+del portal Ext_AdminTypeViewerCmdPortal;
+del command Ext_AdminTypeViewerViewTypes;
+del command Ext_AdminTypeViewerViewPolicies;
+del command Ext_AdminTypeViewerViewRels;
+del command Ext_AdminTypeViewerViewCommands;
+del command Ext_AdminTypeViewerCmdPortal;
+del channel Ext_AdminTypesViewer;

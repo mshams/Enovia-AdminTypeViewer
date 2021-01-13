@@ -1,0 +1,5 @@
+add channel Ext_AdminTypesViewer description "Sessions" label "Sessions"
+    command Ext_AdminTypeViewerViewTypes
+    command Ext_AdminTypeViewerViewPolicies
+    command Ext_AdminTypeViewerViewRels
+    command Ext_AdminTypeViewerViewCommands;

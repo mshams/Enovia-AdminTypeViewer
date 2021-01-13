@@ -1,0 +1,27 @@
+add command Ext_AdminTypeViewerViewTypes description "View Types" label "Types"
+  href '${COMMON_DIR}/emxTable.jsp?program=jpo.AdminTypesHelper:getTypesList&table=Ext_AdminTypeTable&header=Types'
+  setting 'Registered Suite' 'EngineeringCentral'
+  setting 'Target Location' 'content';
+
+add command Ext_AdminTypeViewerViewPolicies description "View Policies" label "Policies"
+  href '${COMMON_DIR}/emxTable.jsp?program=jpo.AdminTypesHelper:getPoliciesList&table=Ext_AdminTypeTable&header=Policies'
+  setting 'Registered Suite' 'EngineeringCentral'
+  setting 'Target Location' 'content';
+
+add command Ext_AdminTypeViewerViewRels description "View Relationships" label "Relationships"
+  href '${COMMON_DIR}/emxTable.jsp?program=jpo.AdminTypesHelper:getRelsList&table=Ext_AdminTypeTable&header=Relationships'
+  setting 'Registered Suite' 'EngineeringCentral'
+  setting 'Target Location' 'content';
+
+add command Ext_AdminTypeViewerViewCommands description "View Commands" label "Commands"
+  href '${COMMON_DIR}/emxTable.jsp?program=jpo.AdminTypesHelper:getCommandsList&table=Ext_AdminTypeTable&header=Commands'
+  setting 'Registered Suite' 'EngineeringCentral'
+  setting 'Target Location' 'content';
+
+add command Ext_AdminTypeViewerCmdPortal description "AdminType Viewer" label "AdminType Viewer"
+  href '${COMMON_DIR}/emxPortal.jsp?portal=Ext_AdminTypeViewerPortal'
+  setting 'Registered Suite' 'EngineeringCentral'
+  setting 'Target Location' 'content';
+
+modify menu AdminTools add command Ext_AdminTypeViewerCmdPortal;
+modify menu Ext_Support add command Ext_AdminTypeViewerCmdPortal;

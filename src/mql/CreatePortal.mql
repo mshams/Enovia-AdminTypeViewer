@@ -1,0 +1,2 @@
+add portal Ext_AdminTypeViewerCmdPortal description "AdminTypes Viewer" label "AdminTypes Viewer"
+  channel Ext_AdminTypesViewer;
