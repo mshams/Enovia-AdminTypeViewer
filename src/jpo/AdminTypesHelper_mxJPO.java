@@ -1,5 +1,8 @@
 package jpo;
 
+import com.matrixone.apps.domain.util.MapList;
+import matrix.db.Context;
+
 public class AdminTypesHelper_mxJPO {
     @com.matrixone.apps.framework.ui.ProgramCallable
     public MapList getTypesList(Context context, String[] args) throws Exception {
