@@ -4,7 +4,7 @@ mod table Ext_AdminTypeTable system column name "name" label "Name" order 1
   setting 'program' 'jpo.AdminTypeTable'
   setting 'function' 'getParamByColumnName';
 
-mod table Ext_AdminTypeTable system column name "desc" label "Description" order 2
+mod table Ext_AdminTypeTable system column name "description" label "Description" order 2
   setting 'Column Type' 'program'
   setting 'program' 'jpo.AdminTypeTable'
   setting 'function' 'getParamByColumnName';
