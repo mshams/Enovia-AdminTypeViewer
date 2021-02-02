@@ -6,10 +6,6 @@
 
 package jpo.dto;
 
-import javax.xml.bind.JAXBContext;
-import javax.xml.bind.Unmarshaller;
-import java.io.File;
-
 public class AdminType_mxJPO {
     private static final String ATT_SEPARATOR = "|";
     private String name;
