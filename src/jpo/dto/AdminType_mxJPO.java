@@ -6,8 +6,10 @@
 
 package jpo.dto;
 
+import java.util.Arrays;
+
 public class AdminType_mxJPO {
-    private static final String ATT_SEPARATOR = "|";
+    private static final String ATT_SEPARATOR = "\\|";
     private String name;
     private String description;
     private String originated;
@@ -25,23 +27,22 @@ public class AdminType_mxJPO {
     public AdminType_mxJPO() {
     }
 
-    public static AdminType_mxJPO createFromString(String buffer, AdminTypeName typeName) {
+    public static AdminType_mxJPO createFromString(String buffer, AdminTypeName typeName) throws Exception {
         AdminType_mxJPO obj = null;
-        try {
-            String[] values = buffer.split(ATT_SEPARATOR);
-            if (values.length == 4) {
-                obj = new AdminType_mxJPO(
-                        values[0],
-                        values[1],
-                        values[2],
-                        values[3],
-                        typeName
-                );
-            }
-        } catch (Exception e) {
-            System.out.println(e.toString());
-            obj = null;
-        }
+
+        String[] values = buffer.split(ATT_SEPARATOR);
+        if (values.length == 4) {
+            obj = new AdminType_mxJPO(
+                    values[0],
+                    values[1],
+                    values[2],
+                    values[3],
+                    typeName
+            );
+        } else throw (new Exception(String.format(
+                "Buffer is not in a correct format. Len = %d {%s}",
+                values.length, Arrays.toString(values)
+        )));
 
         return obj;
     }
@@ -54,8 +55,10 @@ public class AdminType_mxJPO {
                 ", modified='" + modified + '\'' +
                 ", type=" + type.name();
     }
+
+    public enum AdminTypeName {
+        Type, Policy, Relationship, Command
+    }
 }
 
-enum AdminTypeName {
-    Type, Policy, Relationship, Command
-}
+
