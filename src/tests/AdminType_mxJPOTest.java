@@ -6,13 +6,16 @@
 
 package tests;
 
+import com.google.common.base.Strings;
 import jpo.dto.AdminType_mxJPO;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
+import org.junit.jupiter.params.provider.MethodSource;
 
-import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.junit.jupiter.api.Assertions.fail;
+import javax.ejb.AfterCompletion;
 
+import static org.junit.jupiter.api.Assertions.*;
+
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 class AdminType_mxJPOTest {
     private static final String STR_TYPE = "Ext_ConfigObject|Config Object|11/17/2021 6:09:41 PM|11/18/2021 10:59:54 AM";
     private static final String STR_CMD = "ECHDecisionApplicableItemsPowerView|PowerView to show Applicable Items and Applies To tabs|2/4/2021 9:04:13 PM|2/4/2021 9:04:13 PM";
@@ -24,6 +27,7 @@ class AdminType_mxJPOTest {
     private static jpo.dto.AdminType_mxJPO objCmd;
 
     @Test
+    @Order(1)
     void createFromStringType() {
         try {
             objType = jpo.dto.AdminType_mxJPO.createFromString(
@@ -37,6 +41,7 @@ class AdminType_mxJPOTest {
     }
 
     @Test
+    @Order(1)
     void createFromStringCmd() {
         try {
             objCmd = AdminType_mxJPO.createFromString(
@@ -50,6 +55,7 @@ class AdminType_mxJPOTest {
     }
 
     @Test
+    @Order(1)
     void createFromStringRel() {
         try {
             objRel = AdminType_mxJPO.createFromString(
@@ -63,6 +69,7 @@ class AdminType_mxJPOTest {
     }
 
     @Test
+    @Order(1)
     void createFromStringPolicy() {
         try {
             objPolicy = AdminType_mxJPO.createFromString(
@@ -75,4 +82,27 @@ class AdminType_mxJPOTest {
         assertNotNull(objPolicy);
     }
 
+    @Test
+    @Order(2)
+    void testToStringType() {
+        assertFalse(Strings.isNullOrEmpty(objType.toString()));
+    }
+
+    @Test
+    @Order(2)
+    void testToStringCmd() {
+        assertFalse(Strings.isNullOrEmpty(objCmd.toString()));
+    }
+
+    @Test
+    @Order(2)
+    void testToStringRel() {
+        assertFalse(Strings.isNullOrEmpty(objRel.toString()));
+    }
+
+    @Test
+    @Order(2)
+    void testToStringPolicy() {
+        assertFalse(Strings.isNullOrEmpty(objPolicy.toString()));
+    }
 }
