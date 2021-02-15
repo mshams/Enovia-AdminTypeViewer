@@ -7,14 +7,23 @@
 package jpo;
 
 import com.matrixone.apps.domain.util.MapList;
+import com.matrixone.apps.domain.util.MqlUtil;
+import jpo.dto.AdminType_mxJPO;
 import matrix.db.Context;
 
 public class AdminTypesHelper_mxJPO {
+    private static final String MQL_LIST_TYPE = "list type * select name description originated modified dump |;";
+    private static final String MQL_LIST_CMD = "list command * select name description originated modified dump |;";
+    private static final String MQL_LIST_REL = "list relationship * select name description originated modified dump |;";
+    private static final String MQL_LIST_POLICY = "list policy * select name description originated modified dump |;";
+
     @com.matrixone.apps.framework.ui.ProgramCallable
     public MapList getTypesList(Context context, String[] args) throws Exception {
-        MapList result = new MapList();
+        MapList result;
 
         try {
+            String buffer = MqlUtil.mqlCommand(context, MQL_LIST_TYPE);
+            result = createMapList(buffer, jpo.dto.AdminType_mxJPO.AdminTypeName.Type);
 
             return result;
         } catch (Exception e) {
@@ -27,6 +36,8 @@ public class AdminTypesHelper_mxJPO {
         MapList result = new MapList();
 
         try {
+            String buffer = MqlUtil.mqlCommand(context, MQL_LIST_POLICY);
+            result = createMapList(buffer, AdminType_mxJPO.AdminTypeName.Policy);
 
             return result;
         } catch (Exception e) {
@@ -39,6 +50,8 @@ public class AdminTypesHelper_mxJPO {
         MapList result = new MapList();
 
         try {
+            String buffer = MqlUtil.mqlCommand(context, MQL_LIST_REL);
+            result = createMapList(buffer, AdminType_mxJPO.AdminTypeName.Relationship);
 
             return result;
         } catch (Exception e) {
@@ -51,10 +64,28 @@ public class AdminTypesHelper_mxJPO {
         MapList result = new MapList();
 
         try {
+            String buffer = MqlUtil.mqlCommand(context, MQL_LIST_CMD);
+            result = createMapList(buffer, AdminType_mxJPO.AdminTypeName.Command);
 
             return result;
         } catch (Exception e) {
             throw new Exception("getCommandsList", e);
         }
+    }
+
+    private MapList createMapList(String buffer, jpo.dto.AdminType_mxJPO.AdminTypeName typeName) throws Exception {
+        MapList result = null;
+        String[] lines = buffer.split("\n");
+
+        if (lines.length > 0) {
+            result = new MapList();
+
+            for (String line : lines) {
+                jpo.dto.AdminType_mxJPO obj = jpo.dto.AdminType_mxJPO.createFromString(line, typeName);
+                result.add(obj.toMap());
+            }
+        }
+
+        return result;
     }
 }
