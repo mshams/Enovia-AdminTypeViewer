@@ -7,9 +7,17 @@
 package jpo.dto;
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 public class AdminType_mxJPO {
     private static final String ATT_SEPARATOR = "\\|";
+    private final String STR_NAME = "name";
+    private final String STR_DESC = "description";
+    private final String STR_ORG = "originated";
+    private final String STR_MOD = "modified";
+    private final String STR_TYPE = "type";
+
     private String name;
     private String description;
     private String originated;
@@ -54,6 +62,37 @@ public class AdminType_mxJPO {
                 ", originated='" + originated + '\'' +
                 ", modified='" + modified + '\'' +
                 ", type=" + type.name();
+    }
+
+    public Map toMap() {
+        Map obj = new HashMap();
+        obj.put(STR_NAME, getName());
+        obj.put(STR_DESC, getDescription());
+        obj.put(STR_ORG, getOriginated());
+        obj.put(STR_MOD, getModified());
+        obj.put(STR_TYPE, getType());
+
+        return obj;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public String getOriginated() {
+        return originated;
+    }
+
+    public String getModified() {
+        return modified;
+    }
+
+    public String getType() {
+        return type.name();
     }
 
     public enum AdminTypeName {
