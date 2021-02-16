@@ -94,10 +94,6 @@ public class AdminType_mxJPO {
     public String getType() {
         return type.name();
     }
-
-    public enum AdminTypeName {
-        Type, Policy, Relationship, Command
-    }
 }
 
 

@@ -32,7 +32,7 @@ class AdminType_mxJPOTest {
         try {
             objType = jpo.dto.AdminType_mxJPO.createFromString(
                     STR_TYPE,
-                    jpo.dto.AdminType_mxJPO.AdminTypeName.Type);
+                    jpo.dto.AdminTypeName.Type);
         } catch (Exception e) {
             fail(e.toString());
         }
@@ -46,7 +46,7 @@ class AdminType_mxJPOTest {
         try {
             objCmd = AdminType_mxJPO.createFromString(
                     STR_CMD,
-                    jpo.dto.AdminType_mxJPO.AdminTypeName.Command);
+                    jpo.dto.AdminTypeName.Command);
 
         } catch (Exception e) {
             fail(e.toString());
@@ -60,7 +60,7 @@ class AdminType_mxJPOTest {
         try {
             objRel = AdminType_mxJPO.createFromString(
                     STR_REL,
-                    jpo.dto.AdminType_mxJPO.AdminTypeName.Relationship);
+                    jpo.dto.AdminTypeName.Relationship);
 
         } catch (Exception e) {
             fail(e.toString());
@@ -74,7 +74,7 @@ class AdminType_mxJPOTest {
         try {
             objPolicy = AdminType_mxJPO.createFromString(
                     STR_POLICY,
-                    jpo.dto.AdminType_mxJPO.AdminTypeName.Policy);
+                    jpo.dto.AdminTypeName.Policy);
 
         } catch (Exception e) {
             fail(e.toString());
