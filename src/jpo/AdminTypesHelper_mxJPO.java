@@ -8,8 +8,7 @@ package jpo;
 
 import com.matrixone.apps.domain.util.MapList;
 import com.matrixone.apps.domain.util.MqlUtil;
-import jpo.dto.AdminTypeName;
-import jpo.dto.AdminType_mxJPO;
+import jpo.dto.AdminTypeName_mxJPO;
 import matrix.db.Context;
 
 public class AdminTypesHelper_mxJPO {
@@ -24,7 +23,7 @@ public class AdminTypesHelper_mxJPO {
 
         try {
             String buffer = MqlUtil.mqlCommand(context, MQL_LIST_TYPE);
-            result = createMapList(buffer, jpo.dto.AdminTypeName.Type);
+            result = createMapList(buffer, AdminTypeName_mxJPO.Type);
 
             return result;
         } catch (Exception e) {
@@ -38,7 +37,7 @@ public class AdminTypesHelper_mxJPO {
 
         try {
             String buffer = MqlUtil.mqlCommand(context, MQL_LIST_POLICY);
-            result = createMapList(buffer, jpo.dto.AdminTypeName.Policy);
+            result = createMapList(buffer, AdminTypeName_mxJPO.Policy);
 
             return result;
         } catch (Exception e) {
@@ -52,7 +51,7 @@ public class AdminTypesHelper_mxJPO {
 
         try {
             String buffer = MqlUtil.mqlCommand(context, MQL_LIST_REL);
-            result = createMapList(buffer, jpo.dto.AdminTypeName.Relationship);
+            result = createMapList(buffer, AdminTypeName_mxJPO.Relationship);
 
             return result;
         } catch (Exception e) {
@@ -66,7 +65,7 @@ public class AdminTypesHelper_mxJPO {
 
         try {
             String buffer = MqlUtil.mqlCommand(context, MQL_LIST_CMD);
-            result = createMapList(buffer, jpo.dto.AdminTypeName.Command);
+            result = createMapList(buffer, AdminTypeName_mxJPO.Command);
 
             return result;
         } catch (Exception e) {
@@ -74,7 +73,7 @@ public class AdminTypesHelper_mxJPO {
         }
     }
 
-    private MapList createMapList(String buffer, jpo.dto.AdminTypeName typeName) throws Exception {
+    private MapList createMapList(String buffer, AdminTypeName_mxJPO typeName) throws Exception {
         MapList result = null;
         String[] lines = buffer.split("\n");
 

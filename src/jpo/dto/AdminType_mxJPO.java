@@ -22,9 +22,9 @@ public class AdminType_mxJPO {
     private String description;
     private String originated;
     private String modified;
-    private AdminTypeName type;
+    private AdminTypeName_mxJPO type;
 
-    public AdminType_mxJPO(String name, String description, String originated, String modified, AdminTypeName type) {
+    public AdminType_mxJPO(String name, String description, String originated, String modified, AdminTypeName_mxJPO type) {
         this.name = name;
         this.description = description;
         this.originated = originated;
@@ -35,7 +35,7 @@ public class AdminType_mxJPO {
     public AdminType_mxJPO() {
     }
 
-    public static AdminType_mxJPO createFromString(String buffer, AdminTypeName typeName) throws Exception {
+    public static AdminType_mxJPO createFromString(String buffer, AdminTypeName_mxJPO typeName) throws Exception {
         AdminType_mxJPO obj = null;
 
         String[] values = buffer.split(ATT_SEPARATOR);

@@ -7,11 +7,9 @@
 package tests;
 
 import com.google.common.base.Strings;
+import jpo.dto.AdminTypeName_mxJPO;
 import jpo.dto.AdminType_mxJPO;
 import org.junit.jupiter.api.*;
-import org.junit.jupiter.params.provider.MethodSource;
-
-import javax.ejb.AfterCompletion;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -32,7 +30,7 @@ class AdminType_mxJPOTest {
         try {
             objType = jpo.dto.AdminType_mxJPO.createFromString(
                     STR_TYPE,
-                    jpo.dto.AdminTypeName.Type);
+                    AdminTypeName_mxJPO.Type);
         } catch (Exception e) {
             fail(e.toString());
         }
@@ -46,7 +44,7 @@ class AdminType_mxJPOTest {
         try {
             objCmd = AdminType_mxJPO.createFromString(
                     STR_CMD,
-                    jpo.dto.AdminTypeName.Command);
+                    AdminTypeName_mxJPO.Command);
 
         } catch (Exception e) {
             fail(e.toString());
@@ -60,7 +58,7 @@ class AdminType_mxJPOTest {
         try {
             objRel = AdminType_mxJPO.createFromString(
                     STR_REL,
-                    jpo.dto.AdminTypeName.Relationship);
+                    AdminTypeName_mxJPO.Relationship);
 
         } catch (Exception e) {
             fail(e.toString());
@@ -74,7 +72,7 @@ class AdminType_mxJPOTest {
         try {
             objPolicy = AdminType_mxJPO.createFromString(
                     STR_POLICY,
-                    jpo.dto.AdminTypeName.Policy);
+                    AdminTypeName_mxJPO.Policy);
 
         } catch (Exception e) {
             fail(e.toString());

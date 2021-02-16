@@ -6,6 +6,6 @@
 
 package jpo.dto;
 
-public enum AdminTypeName {
+public enum AdminTypeName_mxJPO {
     Type, Policy, Relationship, Command
 }
