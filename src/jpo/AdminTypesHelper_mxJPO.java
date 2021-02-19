@@ -23,7 +23,7 @@ public class AdminTypesHelper_mxJPO {
 
         try {
             String buffer = MqlUtil.mqlCommand(context, MQL_LIST_TYPE);
-            result = createMapList(buffer, AdminTypeName_mxJPO.Type);
+            result = createMapList(buffer, jpo.dto.AdminTypeName_mxJPO.Type);
 
             return result;
         } catch (Exception e) {
@@ -37,7 +37,7 @@ public class AdminTypesHelper_mxJPO {
 
         try {
             String buffer = MqlUtil.mqlCommand(context, MQL_LIST_POLICY);
-            result = createMapList(buffer, AdminTypeName_mxJPO.Policy);
+            result = createMapList(buffer, jpo.dto.AdminTypeName_mxJPO.Policy);
 
             return result;
         } catch (Exception e) {
@@ -51,7 +51,7 @@ public class AdminTypesHelper_mxJPO {
 
         try {
             String buffer = MqlUtil.mqlCommand(context, MQL_LIST_REL);
-            result = createMapList(buffer, AdminTypeName_mxJPO.Relationship);
+            result = createMapList(buffer, jpo.dto.AdminTypeName_mxJPO.Relationship);
 
             return result;
         } catch (Exception e) {
@@ -65,7 +65,7 @@ public class AdminTypesHelper_mxJPO {
 
         try {
             String buffer = MqlUtil.mqlCommand(context, MQL_LIST_CMD);
-            result = createMapList(buffer, AdminTypeName_mxJPO.Command);
+            result = createMapList(buffer, jpo.dto.AdminTypeName_mxJPO.Command);
 
             return result;
         } catch (Exception e) {
@@ -73,7 +73,7 @@ public class AdminTypesHelper_mxJPO {
         }
     }
 
-    private MapList createMapList(String buffer, AdminTypeName_mxJPO typeName) throws Exception {
+    private MapList createMapList(String buffer, jpo.dto.AdminTypeName_mxJPO typeName) throws Exception {
         MapList result = null;
         String[] lines = buffer.split("\n");
 
