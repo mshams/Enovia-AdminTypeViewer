@@ -18,3 +18,4 @@ mod table Ext_AdminTypeTable system column name "modified" label "Modification D
   setting 'Column Type' 'program'
   setting 'program' 'jpo.AdminTypeTable'
   setting 'function' 'getParamByColumnName';
+
