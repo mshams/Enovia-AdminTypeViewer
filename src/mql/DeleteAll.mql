@@ -1,5 +1,5 @@
 del table Ext_AdminTypeTable system;
-del portal Ext_AdminTypeViewerCmdPortal;
+del portal Ext_AdminTypeViewerPortal;
 del command Ext_AdminTypeViewerViewTypes;
 del command Ext_AdminTypeViewerViewPolicies;
 del command Ext_AdminTypeViewerViewRels;
