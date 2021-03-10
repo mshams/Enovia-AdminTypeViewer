@@ -21,7 +21,8 @@ add command Ext_AdminTypeViewerViewCommands description "View Commands" label "C
 add command Ext_AdminTypeViewerCmdPortal description "AdminType Viewer" label "AdminType Viewer"
   href '${COMMON_DIR}/emxPortal.jsp?portal=Ext_AdminTypeViewerPortal'
   setting 'Registered Suite' 'EngineeringCentral'
-  setting 'Target Location' 'content';
+  setting 'Target Location' 'content'
+  user Ext_PowerUsers user Ext_Admin;
 
 modify menu AdminTools add command Ext_AdminTypeViewerCmdPortal;
 modify menu Ext_Support add command Ext_AdminTypeViewerCmdPortal;

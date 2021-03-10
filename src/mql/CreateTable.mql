@@ -19,3 +19,8 @@ mod table Ext_AdminTypeTable system column name "modified" label "Modification D
   setting 'program' 'jpo.AdminTypeTable'
   setting 'function' 'getParamByColumnName';
 
+mod table Ext_AdminTypeTable system column name "newWindow" label "Open" order 5
+  setting 'Column Type' 'programHTMLOutput'
+  setting 'program' 'jpo.AdminTypeTable'
+  setting 'function' 'getHyperlinkColumn';
+
