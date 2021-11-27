@@ -1,20 +1,20 @@
 add command Ext_AdminTypeViewerViewTypes description "View Types" label "Types"
-  href '${COMMON_DIR}/emxTable.jsp?program=jpo.AdminTypesHelper:getTypesList&table=Ext_AdminTypeTable&header=Types'
+  href '${COMMON_DIR}/emxTable.jsp?program=jpo.AdminTypesHelper:getTypesList&table=Ext_AdminTypeTable&header=Types&headerRepeat=0&sortColumnName=name'
   setting 'Registered Suite' 'EngineeringCentral'
   setting 'Target Location' 'content';
 
 add command Ext_AdminTypeViewerViewPolicies description "View Policies" label "Policies"
-  href '${COMMON_DIR}/emxTable.jsp?program=jpo.AdminTypesHelper:getPoliciesList&table=Ext_AdminTypeTable&header=Policies'
+  href '${COMMON_DIR}/emxTable.jsp?program=jpo.AdminTypesHelper:getPoliciesList&table=Ext_AdminTypeTable&header=Policies&headerRepeat=0&sortColumnName=name'
   setting 'Registered Suite' 'EngineeringCentral'
   setting 'Target Location' 'content';
 
 add command Ext_AdminTypeViewerViewRels description "View Relationships" label "Relationships"
-  href '${COMMON_DIR}/emxTable.jsp?program=jpo.AdminTypesHelper:getRelsList&table=Ext_AdminTypeTable&header=Relationships'
+  href '${COMMON_DIR}/emxTable.jsp?program=jpo.AdminTypesHelper:getRelsList&table=Ext_AdminTypeTable&header=Relationships&headerRepeat=0&sortColumnName=name'
   setting 'Registered Suite' 'EngineeringCentral'
   setting 'Target Location' 'content';
 
 add command Ext_AdminTypeViewerViewCommands description "View Commands" label "Commands"
-  href '${COMMON_DIR}/emxTable.jsp?program=jpo.AdminTypesHelper:getCommandsList&table=Ext_AdminTypeTable&header=Commands'
+  href '${COMMON_DIR}/emxTable.jsp?program=jpo.AdminTypesHelper:getCommandsList&table=Ext_AdminTypeTable&header=Commands&headerRepeat=0&sortColumnName=name'
   setting 'Registered Suite' 'EngineeringCentral'
   setting 'Target Location' 'content';
 
