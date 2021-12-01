@@ -24,5 +24,8 @@ add command Ext_AdminTypeViewerCmdPortal description "AdminType Viewer" label "A
   setting 'Target Location' 'content'
   user Ext_PowerUsers user Ext_Admin;
 
+mod command Ext_AdminTypeViewerCmdPortal
+  user admin_platform;
+
 modify menu AdminTools add command Ext_AdminTypeViewerCmdPortal;
 modify menu Ext_Support add command Ext_AdminTypeViewerCmdPortal;
