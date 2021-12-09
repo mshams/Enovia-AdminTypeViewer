@@ -20,4 +20,8 @@ public class MQLUtil_mxJPO {
 
         return resultStr;
     }
+
+    public String query(){
+        return "";
+    }
 }
